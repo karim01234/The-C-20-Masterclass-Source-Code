@@ -37,8 +37,14 @@ int main(){
 
 
     //Base references
-    Shape& shape_ref = circle1;
-    //shape_ref.draw(); // Cicle::draw()
+    std::cout << "Base references" << std::endl;
+    
+    Shape& shape_ref = shape1;
+    shape_ref.draw();
+    shape_ref = circle1;
+    shape_ref.draw();
+    shape_ref = oval1;
+    shape_ref.draw();
 
 
  
@@ -53,6 +59,7 @@ int main(){
 
 
     //Shapes stored in collections
+    std::cout << std::endl << "Shapes stored in collections" << std::endl;
     Shape* shape_collection[]{&shape1,&oval1,&circle1};
 	 
 	 for(Shape* s_ptr : shape_collection){
